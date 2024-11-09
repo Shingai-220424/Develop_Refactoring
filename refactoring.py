@@ -25,9 +25,9 @@ def repeat_string(s, num1, num2):
         _type_: 改行削除
     """
     # TODO:数値の範囲を定数化する
-    if not (5 <= len(s) <= 10):
+    if len(s) < 5 or len(s) > 10:
         raise ValueError("文字列は5文字以上、10以下でなければなりません")
-    if not re.match("^[a-zA-z]+$", s):
+    if not s.isalpha():
         raise ValueError("文字列はアルファベットのみでなければなりません")
     horizontal = s * num1
 
